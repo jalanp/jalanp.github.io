@@ -200,17 +200,8 @@ header {
 .collapse-panel {
 	border: 1px solid black;
 	background: #c9c9c9;
-	opacity: 0;
 	display: none;
-	max-height: 0;
 	overflow: hidden;
-	
-}
-
-.collapse-panel.show {
-	opacity: 1;
-	display: block;
-	max-height: 200px;
 }
 
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/

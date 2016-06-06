@@ -12,8 +12,9 @@ $(document).ready(function(){
 		$(this).attr("src", "images/linkedin.png");
 	});
 	
+	/*-----sliding panels for project section-----*/
 	$(".collapse-header").click(function(){
 		$(this).toggleClass("selected");
-		$(this).next().toggleClass("show");
+		$(this).next().slideToggle();
 	});
 });
