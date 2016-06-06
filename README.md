@@ -9,3 +9,5 @@ Website
 ####General Features:
 - work on responsiveness (mobile/other screen capability with media queries)
 - add other JS/JQuery features (e.g. for Projects, have a download button for the program, and have a bouncing arrow on top of it saying "Try Me"?)
+
+[LINK TO SITE](http://jalanp.github.io)
