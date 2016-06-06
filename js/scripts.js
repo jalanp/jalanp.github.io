@@ -11,4 +11,9 @@ $(document).ready(function(){
 	},function(){
 		$(this).attr("src", "images/linkedin.png");
 	});
+	
+	$(".collapse-header").click(function(){
+		$(this).toggleClass("selected");
+		$(this).next().toggleClass("show");
+	});
 });

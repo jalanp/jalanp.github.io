@@ -8,6 +8,7 @@ html, body, div, header, nav, ul, li, a, h1{
 	margin: 0;
 	border: 0;
 	font-size: 100%;
+	font-family: Garamond;
 	vertical-align: baseline;
 }
 
@@ -165,12 +166,25 @@ header {
 
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
-.collapse-header {
-	background: #fff;
-	border: 1px solid black;
-	margin: 0.4em;
-	padding: 1em;
+#main-content-wrapper.projects {
 	width: 80%;
+	left: 10%;
+	top: 180px;
+	margin-bottom: 100px;
+}
+
+.collapse-header, .collapse-panel {
+	padding: 1em;
+}
+
+.collapse-header {
+	background: #c9c9c9;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.collapse-header:hover , .collapse-header.selected{
+	background: #a9a9a9;
 }
 
 .collapse-header h1 {
@@ -181,6 +195,22 @@ header {
 	content: "\02795";
 	float: right;
 	font-size: 0.8em;
+}
+
+.collapse-panel {
+	border: 1px solid black;
+	background: #c9c9c9;
+	opacity: 0;
+	display: none;
+	max-height: 0;
+	overflow: hidden;
+	
+}
+
+.collapse-panel.show {
+	opacity: 1;
+	display: block;
+	max-height: 200px;
 }
 
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
