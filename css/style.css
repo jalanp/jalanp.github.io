@@ -170,7 +170,7 @@ header {
 #main-content-wrapper.projects {
 	width: 80%;
 	left: 10%;
-	top: 180px;
+	top: 190px;
 	margin-bottom: 100px;
 }
 
@@ -258,11 +258,11 @@ header {
 }
 
 @media(max-width: 580px) {
-	header {height: 110px;}
+	header {height: 115px;}
 	#main-content-wrapper {top: 110px;}
-	#logo {font-size: 0.7em;}
-	.gitlink img {height: 40px;}
-	#nav {top: 3.5em;}
+	#logo {font-size: 0.9em;}
+	.gitlink img {height: 45px;}
+	#nav {top: 3.8em;}
 	
 	#nav ul li {
 		width: 90px;
@@ -270,7 +270,7 @@ header {
 	}
 	
 	#nav ul li a {
-		font-size: 0.7em;
+		font-size: 0.9em;
 		padding: 0.7em 0.5em;
 	}
 	
@@ -278,7 +278,7 @@ header {
 }
 
 @media(max-width: 414px) {
-	header {height: 140px;}
+	header {height: 165px;}
 	#main-content-wrapper {top: 140px;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
