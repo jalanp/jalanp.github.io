@@ -248,9 +248,7 @@ header {
 		margin: 1.4em 0 0 0;
 		width: 100%;
 	}
-	#profile-pic img {
-		width: 30%;
-	}
+	#profile-pic img {width: 30%;}
 	
 	#main-content-wrapper article:nth-child(2) {
 		margin-top: 1.4em;
@@ -260,11 +258,9 @@ header {
 
 @media(max-width: 580px) {
 	header {height: 110px;}
-	
+	#main-content-wrapper {top: 110px;}
 	#logo {font-size: 0.7em;}
-	
 	.gitlink img {height: 40px;}
-	
 	#nav {top: 3.5em;}
 	
 	#nav ul li {
@@ -276,10 +272,13 @@ header {
 		font-size: 0.7em;
 		padding: 0.7em 0.5em;
 	}
+	
+	#profile-pic img {width: 40%}
 }
 
 @media(max-width: 414px) {
 	header {height: 140px;}
-	
+	#main-content-wrapper {top: 140px;}
 	#nav ul li {width: 125px;}
+	#profile-pic img {width: 55%}
 }
