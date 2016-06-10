@@ -281,5 +281,5 @@ header {
 @media(max-width: 414px) {
 	header {height: 140px;}
 	
-	#nav  ul li {width: 125px;}
+	#nav ul li {width: 125px;}
 }
