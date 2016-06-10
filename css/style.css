@@ -8,7 +8,8 @@ html, body, div, header, nav, ul, li, a, h1{
 	margin: 0;
 	border: 0;
 	font-size: 100%;
-	font-family: Garamond;
+	font-family: Alegreya;
+	letter-spacing: -0.02em;
 	vertical-align: baseline;
 }
 
