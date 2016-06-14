@@ -17,4 +17,17 @@ $(document).ready(function(){
 		$(this).toggleClass("selected");
 		$(this).next().slideToggle();
 	});
+	
+	$(".download-link").hover(function(){
+		$(this).toggleClass("hovered");
+	});
+	
+	setInterval(function(){
+		if ($(".collapse-header").hasClass("selected")) {
+			$(".selected").next().find(".download").effect("bounce", {times:1}, 1500);
+		}
+		if ($(".download-link").hasClass("hovered")) {
+			$(".hovered").parent().stop(true, false);
+		}
+	},1500);
 });

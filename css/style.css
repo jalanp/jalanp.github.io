@@ -194,11 +194,13 @@ header {
 }
 
 .collapse-header h1 {
-	
+	color: #252839;
+	font-style: italic;
 }
 
 .collapse-header h1:after {
 	content: "\02795";
+	font-style: normal;
 	float: right;
 	font-size: 0.8em;
 }
@@ -215,6 +217,37 @@ header {
 	overflow: hidden;
 }
 
+.download {
+	margin-top: 2em;
+	width: 150px;
+	float: right;
+}
+
+.download-link {
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	color: #a9a9a9;
+	text-decoration: none;
+	padding: 0.5em;
+	border: 0.1em solid #a9a9a9;
+	border-radius: 4px;
+	background: #cd220d;
+	
+	-webkit-box-shadow: 0.1em 0.1em 0.6em 0.1em #404040;
+	
+	/* transitions */
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+}
+
+.download-link:hover {
+	border-color: #cd220d;
+	background: #a9a9a9;
+	color: #cd220d;
+}
+
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
 
 @media(max-width: 1230px) {
@@ -225,9 +258,9 @@ header {
 }
 
 @media(max-width: 1050px) {
-	header {height: 140px;}
+	header {height: 150px;}
 	
-	#main-content-wrapper {top: 140px;}
+	#main-content-wrapper {top: 150px;}
 	
 	#logo {
 		position: absolute;
@@ -258,8 +291,8 @@ header {
 }
 
 @media(max-width: 580px) {
-	header {height: 115px;}
-	#main-content-wrapper {top: 110px;}
+	header {height: 120px;}
+	#main-content-wrapper {top: 120px;}
 	#logo {font-size: 0.9em;}
 	.gitlink img {height: 45px;}
 	#nav {top: 3.8em;}
@@ -278,8 +311,8 @@ header {
 }
 
 @media(max-width: 414px) {
-	header {height: 165px;}
-	#main-content-wrapper {top: 140px;}
+	header {height: 170px;}
+	#main-content-wrapper {top: 170px;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
 }
