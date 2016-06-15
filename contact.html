@@ -17,6 +17,7 @@
 		
 		<!-- JQuery and JavaScript file -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</head>
 
@@ -42,8 +43,31 @@
 		</header>
 		
 		<!-- Main Content -->
-		<div id="main-content-wrapper">
-			
+		<div id="main-content-wrapper" class="contact">
+			<article> 
+				<h1>Description</h1>
+				<p>Hi</p>
+			</article>
+			<form id="contact-form" method="POST">
+				<fieldset>
+					<span><legend>Name</legend></span>
+					<input type="text" name="First Name" placeholder="First Name">
+					<input type="text" name="Last Name" placeholder="Last Name">
+				</fieldset>
+				<fieldset>
+					<span><legend>Email</legend></span>
+					<input type="email" name="_replyto" placeholder="email@example.com">
+				</fieldset>
+				<input type="hidden" name="_subject" value="Email from jalanp.github.io" />
+				<fieldset>
+					<span><legend>Message</legend></span>
+					<textarea name="Message" placeholder="Write the details of your message here..."></textarea>
+				</fieldset>
+				<input type="text" name="_gotcha" style="display:none" />
+				<fieldset id="submit-button">
+					<input type="submit" value="Submit">
+				</fieldset>
+			</form>
 		</div>
 		
 		<!-- Footer -->

@@ -3,7 +3,7 @@
 
 /*-----------*/ /*-----DEFAULT-----*/ /*-----------*/
 
-html, body, div, header, nav, ul, li, a, h1{
+html, body, div, header, nav, ul, li, a, h1, textarea, input{
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -134,20 +134,20 @@ header {
 }
 
 #main-content-wrapper article {
-	background: #969696;
+	background: #c9c9c9;
 	border: solid black 1px;
 	margin: 3% 3% -0.2% 3%;
 	box-shadow: 0.6em 0.6em 0.4em -0.3em #696969;
 }
 
-#main-content-wrapper article:nth-child(2) {
+#first-about-me {
 	width: 55%;
 	display: inline-block;
 	padding-bottom: 1.2em;
 	overflow: hidden;
 }
 
-#main-content-wrapper article:nth-child(3){
+#second-about-me {
 	width: 92%;
 	display: inline-block;
 	margin-bottom: 5%;
@@ -170,7 +170,6 @@ header {
 #main-content-wrapper.projects {
 	width: 80%;
 	left: 10%;
-	top: 190px;
 	margin-bottom: 100px;
 }
 
@@ -248,19 +247,81 @@ header {
 	color: #cd220d;
 }
 
+/*-----------*/ /*-----CONTACT PAGE CONTENT-----*/ /*-----------*/
+
+#main-content-wrapper.contact {
+	width: 90%;
+	left: 5%;
+	top: 5%;
+}
+
+#contact-form {
+	padding: 0.7em;
+	border: 1px solid black;
+	margin: 2em;
+	background: #c9c9c9;
+	width: 80%;
+}
+
+#contact-form legend {
+	font-weight: 800;
+}
+
+#contact-form fieldset {
+	margin-bottom: 1em;
+	border: 1px solid gray;
+}
+
+fieldset#submit-button {
+	text-align: center;
+	border: none;
+}
+
+#contact-form textarea {
+	width: 95%;
+	height: 100px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+	padding: 0.5em;
+	border: 1px solid #a9a9a9;
+}
+
+#contact-form input[type="text"]:hover,
+#contact-form input[type="email"]:hover,
+#contact-form textarea:hover {
+	border: 1px solid black;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+	outline: 2px solid black;
+}
+
+#contact-form input[type="text"] {width: 9em;}
+#contact-form input[type="email"] {width: 19.5em;}
+
+#contact-form input[type="submit"] {
+	background: #999999;
+	border: none;
+	width: 10em;
+	padding: 1em;
+}
+
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
 
 @media(max-width: 1230px) {
 	#logo {left: 4em;}
 	#nav {right: 3em;}
 	#profile-pic {width: 240px; margin-top: 3em}
-	#main-content-wrapper article:nth-child(2) {width: 58%;}
+	#first-about-me {width: 58%;}
 }
 
 @media(max-width: 1050px) {
 	header {height: 150px;}
-	
-	#main-content-wrapper {top: 150px;}
 	
 	#logo {
 		position: absolute;
@@ -284,7 +345,7 @@ header {
 	}
 	#profile-pic img {width: 30%;}
 	
-	#main-content-wrapper article:nth-child(2) {
+	#first-about-me {
 		margin-top: 1.4em;
 		width: 92%;
 	}
@@ -292,7 +353,6 @@ header {
 
 @media(max-width: 580px) {
 	header {height: 120px;}
-	#main-content-wrapper {top: 120px;}
 	#logo {font-size: 0.9em;}
 	.gitlink img {height: 45px;}
 	#nav {top: 3.8em;}
@@ -312,7 +372,6 @@ header {
 
 @media(max-width: 414px) {
 	header {height: 170px;}
-	#main-content-wrapper {top: 170px;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
 }
