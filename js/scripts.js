@@ -32,7 +32,7 @@ $(document).ready(function(){
 	},1500);
 	
 	/*-----to obscure email (if by any chance spambots come across this form)-----*/
-	$("contact-form").attr("action", "https://formspree.io/" + "prajvinjalan" + "@" + "gmail" + "." + "com");
+	$("#contact-form").attr("action", "https://formspree.io/" + "prajvinjalan" + "@" + "gmail" + "." + "com");
 	
 	
 	/*-----resize the content to match the header accordingly-----*/
