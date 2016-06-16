@@ -3,7 +3,7 @@
 
 /*-----------*/ /*-----DEFAULT-----*/ /*-----------*/
 
-html, body, div, header, nav, ul, li, a, h1, textarea, input{
+html, body, div, header, nav, ul, li, a, h1, h2, textarea, input{
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -161,6 +161,23 @@ header {
 	padding-bottom: 0;
 }
 
+#main-content-wrapper article h2 {
+	letter-spacing: 0.01em;
+	font-size: 1.8em;
+	color: #666;
+	padding: 0 0.5em;
+	margin: 0.2em;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+#main-content-wrapper article h2 span {
+	font-size: 1.2em;
+}
+
 #main-content-wrapper article p {
 	margin: 0.5em;
 	padding: 0.5em;
@@ -312,6 +329,25 @@ fieldset#submit-button {
 	border: none;
 	width: 10em;
 	padding: 1em;
+	
+	color: #c9c9c9;
+	font-weight: bold;
+	padding: 0.9em 1.4em;
+	background: #252839;
+	cursor: pointer;
+	
+	/* transitions */
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+}
+
+#contact-form input[type="submit"]:hover {
+	background: #424866;
+}
+
+#contact-form input[type="submit"]:focus {
+	outline: none;
 }
 
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
