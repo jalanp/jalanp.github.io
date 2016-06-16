@@ -320,7 +320,7 @@ fieldset#submit-button {
 	#logo {left: 4em;}
 	#nav {right: 3em;}
 	#profile-pic {width: 240px; margin-top: 3em}
-	#first-about-me {width: 58%; margin: auto;}
+	#first-about-me {width: 58%;}
 }
 
 @media(max-width: 1050px) {
@@ -349,7 +349,6 @@ fieldset#submit-button {
 	#profile-pic img {width: 30%;}
 	
 	#first-about-me {
-		margin: auto;
 		margin-top: 1.4em;
 		width: 92%;
 	}
