@@ -51,11 +51,11 @@ header {
 	color: #a9a9a9;
 	
 	-webkit-transition: color 0.25s ease-in-out;
-	text-shadow: 0.05em 0.05em 0.4em #404040;
+	text-shadow: 0.05em 0.05em 0.1em #404040;
 }
 
 #logo a:hover {
-	color: #252839;
+	color: #363b53;
 }
 
 .gitlink {
@@ -164,14 +164,14 @@ header {
 #main-content-wrapper article h2 {
 	letter-spacing: 0.01em;
 	font-size: 1.8em;
-	color: #666;
+	color: #a1a1a1;
 	padding: 0 0.5em;
 	margin: 0.2em;
 	text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+   -1px -1px 0 #888,  
+    1px -1px 0 #888,
+    -1px 1px 0 #ddd,
+     1px 1px 0 #ddd;
 }
 
 #main-content-wrapper article h2 span {
@@ -415,4 +415,5 @@ fieldset#submit-button {
 	header {height: 170px;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
+	article h2 {text-align: center;}
 }

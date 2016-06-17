@@ -48,6 +48,15 @@ $(document).ready(function(){
 	$("#contact-form input, #contact-form textarea").on("focusout", function(){
 		$(this).parent().css("background","none");
 	});
+	
+	/*-----automatically add span to each word in all h2 elements-----*/
+	$("h2").each(function(){
+		var words = $(this).html().split(" ");
+		for (i in words)
+			words[i] = "<span>" + words[i].substring(0,1) + "</span>" + words[i].substr(1,words[i].length);
+		var fullText = words.join(" ");
+		$(this).html(fullText);
+	});
 });
 
 $.fn.mainContentResize = function(){
