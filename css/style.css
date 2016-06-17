@@ -3,7 +3,7 @@
 
 /*-----------*/ /*-----DEFAULT-----*/ /*-----------*/
 
-html, body, div, header, nav, ul, li, a, h1, h2, textarea, input{
+html, body, div, header, nav, ul, li, a, h1, h2, textarea, input, p {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -12,6 +12,8 @@ html, body, div, header, nav, ul, li, a, h1, h2, textarea, input{
 	letter-spacing: -0.02em;
 	vertical-align: baseline;
 }
+
+p {color: #363950; font-size: 1.1em;}
 
 /*-----------*/ /*-----PAGE-----*/ /*-----------*/
 
@@ -287,6 +289,14 @@ header {
 	font-weight: 800;
 }
 
+/*
+#contact-form legend:after {
+	content: "     \002A";
+	color: red;
+	font-weight: 400;
+	font-size: 140%;
+}*/
+
 #contact-form fieldset {
 	margin-bottom: 1em;
 	border: none;
@@ -337,9 +347,9 @@ fieldset#submit-button {
 	cursor: pointer;
 	
 	/* transitions */
-	-webkit-transition: background 0.1s ease-in-out;
-	-moz-transition: background 0.1s ease-in-out;
-    transition: background 0.1s ease-in-out;
+	-webkit-transition: background 0.2s ease-in-out;
+	-moz-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
 }
 
 #contact-form input[type="submit"]:hover {
@@ -348,6 +358,23 @@ fieldset#submit-button {
 
 #contact-form input[type="submit"]:focus {
 	outline: none;
+}
+
+/*-----------*/ /*-----THANKS PAGE CONTENT-----*/ /*-----------*/
+#main-content-wrapper.thanks {
+	width: 90%;
+	left: 5%;
+	margin-top: 5em;
+}
+
+article h2#thanks-header {
+	font-size: 3em;
+	text-align: center;
+}
+
+#thanks-header + p {
+	font-size: 1.5em;
+	text-align: center;
 }
 
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
@@ -415,5 +442,5 @@ fieldset#submit-button {
 	header {height: 170px;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
-	article h2 {text-align: center;}
+	article h2, article p {text-align: center;}
 }
