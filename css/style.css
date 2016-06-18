@@ -187,10 +187,19 @@ header {
 
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
-#main-content-wrapper.projects {
-	width: 80%;
-	left: 10%;
-	margin-bottom: 100px;
+#main-content-wrapper.projects, #main-content-wrapper.contact {
+	width: 90%;
+	left: 5%;
+	top: 5%;
+	padding-top: 1.4em;
+}
+
+#main-content-wrapper.projects article {
+	margin-bottom: 2em;
+}
+
+#main-content-wrapper.projects section {
+	margin: 0 3em;
 }
 
 .collapse-header, .collapse-panel {
@@ -268,13 +277,6 @@ header {
 }
 
 /*-----------*/ /*-----CONTACT PAGE CONTENT-----*/ /*-----------*/
-
-#main-content-wrapper.contact {
-	width: 90%;
-	left: 5%;
-	top: 5%;
-	padding-top: 1.4em;
-}
 
 #contact-form {
 	width: 80%;
@@ -427,15 +429,13 @@ article h2#thanks-header {
 	#profile-pic img {width: 40%}
 	#contact-form {text-align: center;}
 	#contact-form legend {margin: auto;}
+	#main-content-wrapper.projects section {margin: 0;}
 }
 
 @media(max-width: 509px) {
 	#contact-form input[type="text"],
 	#contact-form input[type="email"],
-	#contact-form textarea {
-		width: 90%;
-		margin: 0.1em;
-	}
+	#contact-form textarea {width: 90%;	margin: 0.1em;}
 }
 
 @media(max-width: 414px) {

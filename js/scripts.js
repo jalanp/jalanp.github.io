@@ -60,10 +60,5 @@ $(document).ready(function(){
 });
 
 $.fn.mainContentResize = function(){
-	if ($(this).hasClass("projects")) {
-		$(this).css("top","190px");
-	}
-	else {
-		$(this).css("top",$("header").height());
-	}
+	$(this).css("top",$("header").height());
 }
