@@ -1,3 +1,53 @@
+//resize content based on header
+$.fn.mainContentResize = function(){
+	if (window.matchMedia("(max-width: 414px)").matches || window.matchMedia("(max-width: 414px)").matches
+		|| window.matchMedia("(max-width: 580px)").matches) {
+		$(this).css("top","60px");
+	}
+	else {
+		$(this).css("top",$("header").height());
+	}
+}
+
+//change display for logo icons
+function checkGitlink() {
+	if (window.matchMedia("(max-width: 580px)").matches){$(".gitlink").css("display","none");}
+	else {$(".gitlink").css("display","inline-block");}
+}
+
+//resize header based on max-width of screen (when resizing browser)
+function headerResize(displayNav, slide) {
+	if (slide == true){
+		if (displayNav == 1) {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").animate({"height":"170px"}, 200);}
+			else if (window.matchMedia("(max-width: 509px)").matches ||
+				window.matchMedia("(max-width: 580px)").matches){$("header").animate({"height":"120px"}, 200);}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
+			else {$("header").animate({"height":"100px"});}
+		}
+		else {
+			if (window.matchMedia("(max-width: 414px)").matches || 
+				window.matchMedia("(max-width: 580px)").matches) {$("header").animate({"height":"60px"}, 200);}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
+			else {$("header").animate({"height":"100px"});}
+		}
+	}
+	else {
+		if (displayNav == 1) {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","170px");}
+			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","120px");}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
+			else {$("header").css("height","100px");}
+		}
+		else {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","60px");}
+			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","60px");}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
+			else {$("header").css("height","100px");}
+		}
+	}
+}
+
 $(document).ready(function(){
 	var displayNav = 0; //used when displaying navigation menu
 	
@@ -37,8 +87,8 @@ $(document).ready(function(){
 	
 	
 	/*-----resize the content to match the header accordingly-----*/
-	$("#main-content-wrapper").mainContentResize();
 	headerResize(displayNav);
+	$("#main-content-wrapper").mainContentResize();
 	$(window).resize(function(){
 		//display the navigation buttons if not mobile screen sizes
 		if (!(window.matchMedia("(max-width: 414px)").matches) && !(window.matchMedia("(max-width: 509px)").matches)
@@ -88,7 +138,7 @@ $(document).ready(function(){
 		else {
 			displayNav = 0;
 			headerResize(displayNav, true);
-			setTimeout(function(){$("#nav").css("display","none");}, 200);
+			setTimeout(function(){$("#nav").css("display","none");}, 150);
 		}
 		
 		//resize header and page content
@@ -96,54 +146,3 @@ $(document).ready(function(){
 		$("#main-content-wrapper").mainContentResize();
 	});
 });
-
-//resize content based on header
-$.fn.mainContentResize = function(){
-	if (window.matchMedia("(max-width: 414px)").matches || window.matchMedia("(max-width: 414px)").matches
-		|| window.matchMedia("(max-width: 580px)").matches) {
-		$(this).css("top","60px");
-	}
-	else {
-		$(this).css("top",$("header").height());
-	}
-}
-
-//change display for logo icons
-function checkGitlink() {
-	if (window.matchMedia("(max-width: 580px)").matches){$(".gitlink").css("display","none");}
-	else {$(".gitlink").css("display","inline-block");}
-}
-
-//resize header based on max-width of screen (when resizing browser)
-function headerResize(displayNav, slide) {
-	if (slide == true){
-		if (displayNav == 1) {
-			if (window.matchMedia("(max-width: 414px)").matches){$("header").animate({"height":"170px"}, 200);}
-			else if (window.matchMedia("(max-width: 509px)").matches ||
-				window.matchMedia("(max-width: 580px)").matches){$("header").animate({"height":"120px"}, 200);}
-			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
-			else {$("header").animate({"height":"100px"});}
-		}
-		else {
-			if (window.matchMedia("(max-width: 414px)").matches || 
-				window.matchMedia("(max-width: 580px)").matches) {$("header").animate({"height":"60px"}, 200);}
-			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
-			else {$("header").animate({"height":"100px"});}
-		}
-	}
-	else {
-		if (displayNav == 1) {
-			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","170px");}
-			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","120px");}
-			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
-			else {$("header").css("height","100px");}
-		}
-		else {
-			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","60px");}
-			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","60px");}
-			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
-			else {$("header").css("height","100px");}
-		}
-	}
-	console.log(slide)
-}
