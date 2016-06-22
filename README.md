@@ -2,9 +2,9 @@ Website
 ============
 
 ####Sections:
-- About Me (change information)
-- Projects (information and collapsible panels formatting)
-- Contact (HTML form for this)
+- About Me (change information) *include education? work experience? skills?*
+- Projects (information and collapsible panel formatting) *maybe add a slideshow(carousel?) type thing for images?*
+- Contact (HTML form for this) *make fields mandatory?*
 
 ####General Features:
 - work on responsiveness (mobile/other screen capability with media queries)
