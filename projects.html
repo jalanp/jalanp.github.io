@@ -18,7 +18,7 @@
 		<!-- JQuery and JavaScript file -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		<!--<script src="js/scripts.js"></script>-->
+		<script src="js/scripts.js" async></script>
 	</head>
 
 	<body>
@@ -89,17 +89,5 @@
 		<!-- Footer -->
 		<div id="footer-wrapper">
 		</div>
-		<script type="text/javascript">
-			function downloadJSAtOnload() {
-				var element = document.createElement("script");
-				element.src = "js/scripts.js";
-				document.body.appendChild(element);
-			}
-			if (window.addEventListener)
-			window.addEventListener("load", downloadJSAtOnload, false);
-			else if (window.attachEvent)
-			window.attachEvent("onload", downloadJSAtOnload);
-			else window.onload = downloadJSAtOnload;
-		</script>
 	</body>
 </html>
