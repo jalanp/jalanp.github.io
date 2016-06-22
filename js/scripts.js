@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var displayNav = 0;
+	var displayNav = 0; //used when displaying navigation menu
 	
 	/*-----change logo image links on hover and unhover-----*/
 	$("#img-github").hover(function(){
@@ -41,15 +41,14 @@ $(document).ready(function(){
 	headerResize(displayNav);
 	$(window).resize(function(){
 		//display the navigation buttons if not mobile screen sizes
-		if (!(window.matchMedia("(max-width: 414px)").matches) && 
-			!(window.matchMedia("(max-width: 580px)").matches)){
+		if (!(window.matchMedia("(max-width: 414px)").matches) && !(window.matchMedia("(max-width: 509px)").matches)
+			&& !(window.matchMedia("(max-width: 580px)").matches)){
 			$("#nav").css("display","inline-block");
 		}
 		else {$("#nav").css("display","none");} //otherwise hide navigation buttons on small screen resize
 		
 		//assign displayNav a value based on if navigation is being displayed
-		if ($("#nav").css("display") == "none"){displayNav = 0;}
-		else {displayNav = 1;}
+		($("#nav").css("display") == "none") ? displayNav = 0 : displayNav = 1;
 		
 		//resize header and page content
 		headerResize(displayNav);
@@ -84,21 +83,29 @@ $(document).ready(function(){
 		if ($("#nav").css("display") == "none"){
 			$("#nav").css("display","inline-block");
 			displayNav = 1;
+			headerResize(displayNav, true);
 		}
 		else {
-			$("#nav").css("display","none");
 			displayNav = 0;
+			headerResize(displayNav, true);
+			setTimeout(function(){$("#nav").css("display","none");}, 200);
 		}
 		
 		//resize header and page content
-		headerResize(displayNav);
+		
 		$("#main-content-wrapper").mainContentResize();
 	});
 });
 
 //resize content based on header
 $.fn.mainContentResize = function(){
-	$(this).css("top",$("header").height());
+	if (window.matchMedia("(max-width: 414px)").matches || window.matchMedia("(max-width: 414px)").matches
+		|| window.matchMedia("(max-width: 580px)").matches) {
+		$(this).css("top","60px");
+	}
+	else {
+		$(this).css("top",$("header").height());
+	}
 }
 
 //change display for logo icons
@@ -107,18 +114,36 @@ function checkGitlink() {
 	else {$(".gitlink").css("display","inline-block");}
 }
 
-//resize header based on max-width of screen
-function headerResize(displayNav) {
-	if (displayNav == 1) {
-		if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","170px");}
-		else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","120px");}
-		else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
-		else {$("header").css("height","100px");}
+//resize header based on max-width of screen (when resizing browser)
+function headerResize(displayNav, slide) {
+	if (slide == true){
+		if (displayNav == 1) {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").animate({"height":"170px"}, 200);}
+			else if (window.matchMedia("(max-width: 509px)").matches ||
+				window.matchMedia("(max-width: 580px)").matches){$("header").animate({"height":"120px"}, 200);}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
+			else {$("header").animate({"height":"100px"});}
+		}
+		else {
+			if (window.matchMedia("(max-width: 414px)").matches || 
+				window.matchMedia("(max-width: 580px)").matches) {$("header").animate({"height":"60px"}, 200);}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").animate({"height":"150px"});}
+			else {$("header").animate({"height":"100px"});}
+		}
 	}
 	else {
-		if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","60px");}
-		else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","60px");}
-		else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
-		else {$("header").css("height","100px");}
+		if (displayNav == 1) {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","170px");}
+			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","120px");}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
+			else {$("header").css("height","100px");}
+		}
+		else {
+			if (window.matchMedia("(max-width: 414px)").matches){$("header").css("height","60px");}
+			else if (window.matchMedia("(max-width: 580px)").matches){$("header").css("height","60px");}
+			else if (window.matchMedia("(max-width: 1050px)").matches){$("header").css("height","150px");}
+			else {$("header").css("height","100px");}
+		}
 	}
+	console.log(slide)
 }

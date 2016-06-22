@@ -13,19 +13,17 @@ html, body, div, header, nav, ul, li, a, h1, h2, textarea, input, p {
 	vertical-align: baseline;
 }
 
-p {color: #363950; font-size: 1.1em;}
-
 /*-----------*/ /*-----PAGE-----*/ /*-----------*/
 
-html, body{
-	height: 100%;
-}
+html, body{height: 100%;}
 
 body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background: #252839;
 }
+
+p {color: #363950; font-size: 1.1em;}
 
 /*-----------*/ /*-----HEADER-----*/ /*-----------*/
 
@@ -56,9 +54,7 @@ header {
 	text-shadow: 0.05em 0.05em 0.1em #404040;
 }
 
-#logo a:hover {
-	color: #363b53;
-}
+#logo a:hover {color: #363b53;}
 
 .gitlink {
 	left: 0.2em;
@@ -171,21 +167,11 @@ header {
 	color: #a1a1a1;
 	padding: 0 0.5em;
 	margin: 0.2em;
-	text-shadow:
-   -1px -1px 0 #888,  
-    1px -1px 0 #888,
-    -1px 1px 0 #ddd,
-     1px 1px 0 #ddd;
+	text-shadow: -1px -1px 0 #888, 1px -1px 0 #888, -1px 1px 0 #ddd, 1px 1px 0 #ddd;
 }
 
-#main-content-wrapper article h2 span {
-	font-size: 1.2em;
-}
-
-#main-content-wrapper article p {
-	margin: 0.5em;
-	padding: 0.5em;
-}
+#main-content-wrapper article h2 span {font-size: 1.2em;}
+#main-content-wrapper article p {margin: 0.5em; padding: 0.5em;}
 
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
@@ -196,17 +182,9 @@ header {
 	padding-top: 1.4em;
 }
 
-#main-content-wrapper.projects article {
-	margin-bottom: 2em;
-}
-
-#main-content-wrapper.projects section {
-	margin: 0 3em;
-}
-
-.collapse-header, .collapse-panel {
-	padding: 1em;
-}
+#main-content-wrapper.projects article {margin-bottom: 2em;}
+#main-content-wrapper.projects section {margin: 0 3em;}
+.collapse-header, .collapse-panel {padding: 1em;}
 
 .collapse-header {
 	background: #c9c9c9;
@@ -219,14 +197,8 @@ header {
     transition: background 0.1s ease-in-out;
 }
 
-.collapse-header:hover , .collapse-header.selected{
-	background: #a9a9a9;
-}
-
-.collapse-header h1 {
-	color: #252839;
-	font-style: italic;
-}
+.collapse-header:hover , .collapse-header.selected{background: #a9a9a9;}
+.collapse-header h1 {color: #252839; font-style: italic;}
 
 .collapse-header h1:after {
 	content: "\02795";
@@ -235,9 +207,7 @@ header {
 	font-size: 0.8em;
 }
 
-.collapse-header.selected h1:after {
-	content: "\02796";
-}
+.collapse-header.selected h1:after {content: "\02796";}
 
 .collapse-panel {
 	border: 0.1em solid #a9a9a9;
@@ -289,9 +259,7 @@ header {
 	box-shadow: 0.6em 0.6em 0.4em -0.3em #696969;
 }
 
-#contact-form legend {
-	font-weight: 800;
-}
+#contact-form legend {font-weight: 800;}
 
 /*
 #contact-form legend:after {
@@ -301,39 +269,21 @@ header {
 	font-size: 140%;
 }*/
 
-#contact-form fieldset {
-	margin-bottom: 1em;
-	border: none;
-}
-
-fieldset#submit-button {
-	text-align: center;
-}
-
-#contact-form textarea {
-	width: 95%;
-	height: 100px;
-}
+#contact-form fieldset {margin-bottom: 1em; border: none;}
+#contact-form fieldset#submit-button {text-align: center;}
+#contact-form textarea {width: 95%; height: 100px;}
 
 #contact-form input[type="text"],
 #contact-form input[type="email"],
-#contact-form textarea {
-	padding: 0.5em;
-	border: 1px solid #a9a9a9;
-}
+#contact-form textarea {padding: 0.5em; border: 1px solid #a9a9a9;}
 
 #contact-form input[type="text"]:hover,
 #contact-form input[type="email"]:hover,
-#contact-form textarea:hover {
-	border: 1px solid black;
-}
+#contact-form textarea:hover {border: 1px solid black;}
 
 #contact-form input[type="text"]:focus,
 #contact-form input[type="email"]:focus,
-#contact-form textarea:focus {
-	border: 1px solid black;
-	outline: none;
-}
+#contact-form textarea:focus {border: 1px solid black; outline: none;}
 
 #contact-form input[type="text"] {width: 9em;}
 #contact-form input[type="email"] {width: 19.5em;}
@@ -356,13 +306,8 @@ fieldset#submit-button {
     transition: background 0.2s ease-in-out;
 }
 
-#contact-form input[type="submit"]:hover {
-	background: #424866;
-}
-
-#contact-form input[type="submit"]:focus {
-	outline: none;
-}
+#contact-form input[type="submit"]:hover {background: #424866;}
+#contact-form input[type="submit"]:focus {outline: none;}
 
 /*-----------*/ /*-----THANKS PAGE CONTENT-----*/ /*-----------*/
 #main-content-wrapper.thanks {
@@ -371,15 +316,8 @@ fieldset#submit-button {
 	margin-top: 5em;
 }
 
-article h2#thanks-header {
-	font-size: 3em;
-	text-align: center;
-}
-
-#thanks-header + p {
-	font-size: 1.5em;
-	text-align: center;
-}
+article h2#thanks-header {font-size: 3em; text-align: center;}
+#thanks-header + p {font-size: 1.5em; text-align: center;}
 
 /*-----------*/ /*-----OTHER SCREEN SIZES-----*/ /*-----------*/
 
@@ -392,7 +330,6 @@ article h2#thanks-header {
 
 @media(max-width: 1050px) {
 	header {height: 150px;}
-	
 	#logo {
 		position: absolute;
 		top: 0.3em;
@@ -400,7 +337,6 @@ article h2#thanks-header {
 		width: 100%;
 		text-align: center;
 	}
-	
 	#nav {
 		position: absolute;
 		text-align: center;
@@ -408,17 +344,9 @@ article h2#thanks-header {
 		right: 0em;
 		width: 100%;
 	}
-	
-	#profile-pic {
-		margin: 1.4em 0 0 0;
-		width: 100%;
-	}
+	#profile-pic {margin: 1.4em 0 0 0; width: 100%;}
 	#profile-pic img {width: 30%;}
-	
-	#first-about-me {
-		margin-top: 1.4em;
-		width: 92%;
-	}
+	#first-about-me {margin-top: 1.4em; width: 92%;}
 }
 
 @media(max-width: 580px) {
@@ -445,7 +373,7 @@ article h2#thanks-header {
 @media(max-width: 509px) {
 	#contact-form input[type="text"],
 	#contact-form input[type="email"],
-	#contact-form textarea {width: 90%;	margin: 0.1em;}
+	#contact-form textarea {width: 90%; margin: 0.1em;}
 }
 
 @media(max-width: 414px) {
