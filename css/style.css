@@ -261,13 +261,12 @@ header {
 
 #contact-form legend {font-weight: 800;}
 
-/*
 #contact-form legend:after {
 	content: "     \002A";
 	color: red;
 	font-weight: 400;
-	font-size: 140%;
-}*/
+	font-size: 100%;
+}
 
 #contact-form fieldset {margin-bottom: 1em; border: none;}
 #contact-form fieldset#submit-button {text-align: center;}
@@ -308,6 +307,10 @@ header {
 
 #contact-form input[type="submit"]:hover {background: #424866;}
 #contact-form input[type="submit"]:focus {outline: none;}
+
+#contact-form input:required:invalid {
+	
+}
 
 /*-----------*/ /*-----THANKS PAGE CONTENT-----*/ /*-----------*/
 #main-content-wrapper.thanks {
