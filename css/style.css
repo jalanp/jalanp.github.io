@@ -360,7 +360,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	}
 	#profile-pic {margin: 1.4em 0 0 0; width: 100%;}
 	#profile-pic img {width: 30%;}
-	#first-about-me {margin-top: 1.4em; width: 92%;}
+	#first-about-me {margin-top: 0.5em; width: 92%;}
 }
 
 @media(max-width: 580px) {

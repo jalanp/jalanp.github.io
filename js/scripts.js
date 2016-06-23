@@ -70,6 +70,10 @@ $(document).ready(function(){
 	
 	/*-----sliding panels for project section-----*/
 	$(".collapse-header").click(function(){
+		if (!$(this).hasClass("selected")) {
+			$(".collapse-header").removeClass("selected");
+			$(".collapse-header").next().slideUp();
+		}
 		$(this).toggleClass("selected");
 		$(this).next().slideToggle();
 	});
