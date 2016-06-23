@@ -173,6 +173,12 @@ header {
 #main-content-wrapper article h2 span {font-size: 1.2em;}
 #main-content-wrapper article p {margin: 0.5em; padding: 0.5em;}
 
+#mobile-gitlink {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
 #main-content-wrapper.projects, #main-content-wrapper.contact {
@@ -217,13 +223,13 @@ header {
 	overflow: hidden;
 }
 
-.download {
+.project-button {
 	margin-top: 2em;
 	width: 150px;
 	float: right;
 }
 
-.download-link {
+.project-button-link {
 	text-align: center;
 	display: block;
 	font-weight: bold;
@@ -242,11 +248,20 @@ header {
     transition: background 0.1s ease-in-out;
 }
 
-.download-link:hover {
+.project-button-link:hover {
 	border-color: #cd220d;
 	background: #a9a9a9;
 	color: #cd220d;
 }
+
+#main-content-wrapper.projects p a {
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 800;
+	color: #4444ff;
+}
+
+#main-content-wrapper.projects p a:hover {color: #8181ff;}
 
 /*-----------*/ /*-----CONTACT PAGE CONTENT-----*/ /*-----------*/
 
@@ -306,11 +321,7 @@ header {
 }
 
 #contact-form input[type="submit"]:hover {background: #424866;}
-#contact-form input[type="submit"]:focus {outline: none;}
-
-#contact-form input:required:invalid {
-	
-}
+#contact-form input[type="submit"]:focus {outline: none; box-shadow: inset 0 0 1em #141728;}
 
 /*-----------*/ /*-----THANKS PAGE CONTENT-----*/ /*-----------*/
 #main-content-wrapper.thanks {

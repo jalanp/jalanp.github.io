@@ -1,7 +1,6 @@
 //resize content based on header
 $.fn.mainContentResize = function(){
-	if (window.matchMedia("(max-width: 414px)").matches || window.matchMedia("(max-width: 414px)").matches
-		|| window.matchMedia("(max-width: 580px)").matches) {
+	if (window.matchMedia("(max-width: 580px)").matches) {
 		$(this).css("top","60px");
 	}
 	else {
@@ -9,10 +8,16 @@ $.fn.mainContentResize = function(){
 	}
 }
 
-//change display for logo icons
+//change display for github/linkedin icons
 function checkGitlink() {
-	if (window.matchMedia("(max-width: 580px)").matches){$(".gitlink").css("display","none");}
-	else {$(".gitlink").css("display","inline-block");}
+	if (window.matchMedia("(max-width: 580px)").matches){
+		$(".gitlink").css("display","none");
+		$("#mobile-gitlink").css("display","inline-block");
+	}
+	else {
+		$(".gitlink").css("display","inline-block");
+		$("#mobile-gitlink").css("display","none");
+	}
 }
 
 //resize header based on max-width of screen (when resizing browser)
@@ -51,13 +56,13 @@ function headerResize(displayNav, slide) {
 $(document).ready(function(){
 	var displayNav = 0; //used when displaying navigation menu
 	
-	/*-----change logo image links on hover and unhover-----*/
-	$("#img-github").hover(function(){
+	/*-----change github/linkedin image links on hover and unhover-----*/
+	$(".img-github").hover(function(){
 		$(this).attr("src", "images/github_hover.png");
 	},function(){
 		$(this).attr("src", "images/github.png");
 	});
-	$("#img-linkedin").hover(function(){
+	$(".img-linkedin").hover(function(){
 		$(this).attr("src", "images/linkedin_hover.png");
 	},function(){
 		$(this).attr("src", "images/linkedin.png");
@@ -68,16 +73,17 @@ $(document).ready(function(){
 		$(this).toggleClass("selected");
 		$(this).next().slideToggle();
 	});
-	$(".download-link").hover(function(){
+	
+	/*-----add hovered class for buttons to stop animation-----*/
+	$(".project-button-link").hover(function(){
 		$(this).toggleClass("hovered");
 	});
-	
-	/*-----animate download buttons-----*/
+	/*-----animate project page buttons-----*/
 	setInterval(function(){
 		if ($(".collapse-header").hasClass("selected")) {
-			$(".selected").next().find(".download").effect("bounce", {times:1}, 1500);
+			$(".selected").next().find(".project-button").effect("bounce", {times:1}, 1500);
 		}
-		if ($(".download-link").hasClass("hovered")) {
+		if ($(".project-button-link").hasClass("hovered")) {
 			$(".hovered").parent().stop(true, false);
 		}
 	},1500);
@@ -122,7 +128,7 @@ $(document).ready(function(){
 		$(this).html(fullText);
 	});
 
-	/*-----to remove logo icons when screen is smaller-----*/
+	/*-----to move logo icons when screen is smaller-----*/
 	checkGitlink();
 	$(window).resize(function(){
 		checkGitlink();
