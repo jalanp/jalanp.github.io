@@ -155,12 +155,6 @@ header {
 	margin: 3% 3% -0.2% 3%;
 }
 
-#main-content-wrapper article h1 {
-	margin: 0.5em;
-	padding: 0.5em;
-	padding-bottom: 0;
-}
-
 #main-content-wrapper article h2 {
 	letter-spacing: 0.01em;
 	font-size: 1.8em;
@@ -217,6 +211,7 @@ header {
 
 .collapse-panel {
 	border: 0.1em solid #a9a9a9;
+	font-size: 1.1em;
 	background: #6a7082;
 	color: #c9c9c9;
 	display: none;
