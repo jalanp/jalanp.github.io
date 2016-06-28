@@ -258,6 +258,16 @@ header {
 
 #main-content-wrapper.projects p a:hover {color: #8181ff;}
 
+.project-images {
+	margin: 1em;
+	text-align: center;
+}
+
+.project-images img {
+	padding: 1em;
+	height: 400px;
+}
+
 /*-----------*/ /*-----CONTACT PAGE CONTENT-----*/ /*-----------*/
 
 #contact-form {
