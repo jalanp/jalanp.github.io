@@ -211,7 +211,7 @@ header {
 
 .collapse-panel {
 	border: 0.1em solid #a9a9a9;
-	font-size: 1.1em;
+	font-size: 1.05em;
 	background: #6a7082;
 	color: #c9c9c9;
 	display: none;
@@ -258,14 +258,22 @@ header {
 
 #main-content-wrapper.projects p a:hover {color: #8181ff;}
 
-.project-images {
-	margin: 1em;
+.project-images {margin: 1em; text-align: center;}
+#pebbfit-images img {height: 494px; width: 278px;}
+#notyfy-images img {height: 410px; width: 686px;}
+
+.carousel {
+	overflow: hidden;
+	border: 1px solid black;
 	text-align: center;
+	margin: auto;
+	margin-top: 1em;
 }
 
-.project-images img {
-	padding: 1em;
-	height: 400px;
+.carousel ul li {
+	text-align: center;
+	list-style: none;
+	float: left;
 }
 
 /*-----------*/ /*-----CONTACT PAGE CONTENT-----*/ /*-----------*/
@@ -366,6 +374,14 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#profile-pic {margin: 1.4em 0 0 0; width: 100%;}
 	#profile-pic img {width: 30%;}
 	#first-about-me {margin-top: 0.5em; width: 92%;}
+	
+	#pebbfit-images img {height: 409px; width: 230px;}
+	#notyfy-images img {height: 300px; width: 502px}
+}
+
+@media(max-width: 888px) {
+	#pebbfit-images img {height: 338px; width: 190px;}
+	#notyfy-images img {height: 190px; width: 317px;}
 }
 
 @media(max-width: 580px) {
@@ -387,6 +403,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 		float: right;
 		z-index: 2;
 	}
+	.project-images {display: none;}
 }
 
 @media(max-width: 509px) {

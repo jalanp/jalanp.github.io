@@ -8,6 +8,12 @@ $.fn.mainContentResize = function(){
 	}
 }
 
+$.fn.projectImageResize = function(){
+	$(this).css("height",$(this).find("img").height() + "px");
+	$(this).css("width",$(this).find("img").width() + "px");
+	$(this).find("ul").css("width",($(this).find("img").width()*3) + "px");
+}
+
 //change display for github/linkedin icons
 function checkGitlink() {
 	if (window.matchMedia("(max-width: 580px)").matches){
@@ -56,6 +62,15 @@ function headerResize(displayNav, slide) {
 $(document).ready(function(){
 	var displayNav = 0; //used when displaying navigation menu
 	
+	setInterval(function(){
+		$(".carousel ul").each(function(){
+			$(this).animate({marginLeft:-($(this).parent().width())},1000,function(){
+				$(this).find("li:last").after($(this).find("li:first"));
+				$(this).css({marginLeft:0});
+			});
+		})
+	},5000);
+	
 	/*-----change github/linkedin image links on hover and unhover-----*/
 	$(".img-github").hover(function(){
 		$(this).attr("src", "images/github_hover.png");
@@ -78,11 +93,10 @@ $(document).ready(function(){
 		$(this).next().slideToggle();
 	});
 	
-	/*-----add hovered class for buttons to stop animation-----*/
+	/*
 	$(".project-button-link").hover(function(){
 		$(this).toggleClass("hovered");
 	});
-	/*-----animate project page buttons-----*/
 	setInterval(function(){
 		if ($(".collapse-header").hasClass("selected")) {
 			$(".selected").next().find(".project-button").effect("bounce", {times:1}, 1500);
@@ -90,7 +104,7 @@ $(document).ready(function(){
 		if ($(".project-button-link").hasClass("hovered")) {
 			$(".hovered").parent().stop(true, false);
 		}
-	},1500);
+	},1500); */
 	
 	/*-----to obscure email (if by any chance spambots come across this form)-----*/
 	$("#contact-form").attr("action", "https://formspree.io/" + "prajvinjalan" + "@" + "gmail" + "." + "com");
@@ -99,6 +113,9 @@ $(document).ready(function(){
 	/*-----resize the content to match the header accordingly-----*/
 	headerResize(displayNav);
 	$("#main-content-wrapper").mainContentResize();
+	$(".carousel").each(function(){
+		$(this).projectImageResize();
+	});
 	$(window).resize(function(){
 		//display the navigation buttons if not mobile screen sizes
 		if (!(window.matchMedia("(max-width: 414px)").matches) && !(window.matchMedia("(max-width: 509px)").matches)
@@ -113,6 +130,10 @@ $(document).ready(function(){
 		//resize header and page content
 		headerResize(displayNav);
 		$("#main-content-wrapper").mainContentResize();
+		
+		$(".carousel").each(function(){
+			$(this).projectImageResize();
+		});
 	});
 	
 	/*-----animate fieldset based on selected input (contact form)-----*/
