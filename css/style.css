@@ -262,6 +262,7 @@ header {
 #morris-images img {height: 634px; width: 654px;}
 #pebbfit-images img {height: 494px; width: 278px;}
 #notyfy-images img {height: 410px; width: 686px;}
+#track-field-images img {height: 457px; width: 700px;}
 
 .carousel {
 	overflow: hidden;
@@ -379,12 +380,14 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#morris-images img {height: 463px; width: 478px;}
 	#pebbfit-images img {height: 409px; width: 230px;}
 	#notyfy-images img {height: 300px; width: 502px}
+	#track-field-images img {height: 334px; width: 512px;}
 }
 
 @media(max-width: 888px) {
 	#morris-images img {height: 293px; width: 302px;}
 	#pebbfit-images img {height: 338px; width: 190px;}
 	#notyfy-images img {height: 190px; width: 317px;}
+	#track-field-images img {height: 211px; width: 323px;}
 }
 
 @media(max-width: 580px) {
@@ -415,7 +418,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#contact-form textarea {width: 90%; margin: 0.1em;}
 }
 
-@media(max-width: 414px) {
+@media(max-width: 414px) { /*Samsung Galaxy S4 is 358px width*/
 	header {height: 60px;} /*170px*/
 	#logo {margin-left: 0;}
 	#nav ul li {width: 125px;}
@@ -425,4 +428,5 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#morris-images img {height: 233px; width: 240px;}
 	#pebbfit-images img {height: 270px; width: 152px;}
 	#notyfy-images img {height: 144px; width: 240px;}
+	#track-field-images img {height: 160px; width: 245px;}
 }
