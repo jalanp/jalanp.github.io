@@ -6,6 +6,17 @@ $.fn.mainContentResize = function(){
 	else {
 		$(this).css("top",$("header").height());
 	}
+	
+	if (!window.matchMedia("(max-width: 1050px)").matches) {
+		$firstAboutHeight = parseInt($(this).find("#first-about-me").css("height"));
+		$picHeight = parseInt($(this).find("#profile-pic").css("height"));
+		$paddingTop = ($firstAboutHeight - $picHeight)/2.0;
+		console.log($firstAboutHeight, $picHeight, $paddingTop);
+		$(this).find("#profile-pic").css("padding-top",$paddingTop);
+	}
+	else {
+		$(this).find("#profile-pic").css("padding-top","0");
+	}
 }
 
 $.fn.projectImageResize = function(){

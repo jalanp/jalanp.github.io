@@ -121,9 +121,8 @@ header {
 
 #profile-pic {
 	float: right;
-	padding: 0.3em;
 	width: 300px;
-	margin-top: 2em;
+	margin-top: 3%;
 	margin-right: 7em;
 	text-align: center;
 }
@@ -165,13 +164,22 @@ header {
 }
 
 #main-content-wrapper article h2 span {font-size: 1.2em;}
-#main-content-wrapper article p {margin: 0.5em; padding: 0.5em;}
+#main-content-wrapper article p {margin: 0em 0.5em 0.5em 0.5em; padding: 0em 0.5em 0.5em 0.5em;}
 
 #mobile-gitlink {
 	float: left;
 	width: 100%;
 	text-align: center;
 }
+
+#main-content-wrapper p a {
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 800;
+	color: #4444ff;
+}
+
+#main-content-wrapper p a:hover {color: #8181ff;}
 
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
@@ -248,15 +256,6 @@ header {
 	background: #a9a9a9;
 	color: #cd220d;
 }
-
-#main-content-wrapper.projects p a {
-	text-decoration: none;
-	font-style: italic;
-	font-weight: 800;
-	color: #4444ff;
-}
-
-#main-content-wrapper.projects p a:hover {color: #8181ff;}
 
 .project-images {margin: 1em; text-align: center;}
 #morris-images img {height: 634px; width: 654px;}
@@ -352,7 +351,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 @media(max-width: 1230px) {
 	#logo {left: 4em;}
 	#nav {right: 3em;}
-	#profile-pic {width: 240px; margin-top: 3em}
+	#profile-pic {width: 240px;}
 	#first-about-me {width: 58%;}
 }
 
