@@ -23,7 +23,7 @@ body {
 	background: #252839;
 }
 
-p {color: #363950; font-size: 1.1em;}
+p {color: #363950; font-size: 1.1em; text-align: justify;}
 
 /*-----------*/ /*-----HEADER-----*/ /*-----------*/
 
@@ -224,6 +224,7 @@ header {
 	color: #c9c9c9;
 	display: none;
 	overflow: hidden;
+	text-align: justify;
 }
 
 .project-button {
