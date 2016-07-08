@@ -196,6 +196,8 @@ header {
 
 #main-content-wrapper p a:hover {color: #8181ff;}
 
+#education br {display:none;}
+
 /*-----------*/ /*-----PROJECT PAGE CONTENT-----*/ /*-----------*/
 
 #main-content-wrapper.projects, #main-content-wrapper.contact {
