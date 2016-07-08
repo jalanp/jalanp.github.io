@@ -121,7 +121,7 @@ header {
 
 #profile-pic {
 	float: right;
-	width: 300px;
+	width: 240px;
 	margin-top: 3%;
 	margin-right: 7em;
 	text-align: center;
@@ -140,14 +140,14 @@ header {
 }
 
 #first-about-me {
-	width: 55%;
+	width: 60%;
 	display: inline-block;
 	padding-bottom: 1.2em;
 	overflow: hidden;
 	margin: 3% 3% -0.2% 3%;
 }
 
-#second-about-me {
+.others-about-me {
 	width: 92%;
 	display: inline-block;
 	padding-bottom: 1.2em;
@@ -163,8 +163,23 @@ header {
 	text-shadow: -1px -1px 0 #888, 1px -1px 0 #888, -1px 1px 0 #ddd, 1px 1px 0 #ddd;
 }
 
+#main-content-wrapper article h1 {
+	font-size: 1.1em;
+	color: #333;
+	padding: 0 0.5em 0em 0.5em;
+	margin: 0em 0.5em 0.3em 0.5em;
+}
+
 #main-content-wrapper article h2 span {font-size: 1.2em;}
 #main-content-wrapper article p {margin: 0em 0.5em 0.5em 0.5em; padding: 0em 0.5em 0.5em 0.5em;}
+
+#main-content-wrapper article ul {
+	list-style-type: circle;
+	list-style-position: inside;
+	padding: 0em 0.5em 0em 0.5em;
+	margin: 0em 0.5em 0.3em 0.5em;
+	color: #333;
+}
 
 #mobile-gitlink {
 	float: left;
@@ -344,7 +359,6 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 @media(max-width: 1230px) {
 	#logo {left: 4em;}
 	#nav {right: 3em;}
-	#profile-pic {width: 240px;}
 	#first-about-me {width: 58%;}
 }
 
@@ -414,7 +428,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#logo {margin-left: 0;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
-	article h2, article p {text-align: center;}
+	article h2, article h1, article p, article ul {text-align: center;}
 	
 	#morris-images img {height: 233px; width: 240px;}
 	#pebbfit-images img {height: 270px; width: 152px;}
