@@ -3,7 +3,7 @@
 
 /*-----------*/ /*-----DEFAULT-----*/ /*-----------*/
 
-html, body, div, header, nav, ul, li, a, h1, h2, textarea, input, p {
+html, body, div, header, nav, ul, li, a, h1, h2, h3, textarea, input, p {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -23,7 +23,11 @@ body {
 	background: #252839;
 }
 
-p {color: #363950; font-size: 1.1em; text-align: justify;}
+p {
+	color: #363950;
+	font-size: 1.1em;
+	text-align: justify;
+}
 
 /*-----------*/ /*-----HEADER-----*/ /*-----------*/
 
@@ -165,7 +169,16 @@ header {
 
 #main-content-wrapper article h1 {
 	font-size: 1.1em;
+	line-height: 1.1em;
 	color: #333;
+	padding: 0 0.5em 0em 0.5em;
+	margin: 0em 0.5em 0.3em 0.5em;
+}
+
+#main-content-wrapper article h3 {
+	font-size: 1em;
+	font-style: italic;
+	color: #555;
 	padding: 0 0.5em 0em 0.5em;
 	margin: 0em 0.5em 0.3em 0.5em;
 }
@@ -430,7 +443,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#logo {margin-left: 0;}
 	#nav ul li {width: 125px;}
 	#profile-pic img {width: 55%}
-	article h2, article h1, article p, article ul {text-align: center;}
+	article h2, article h1, article h3, article p, article ul {text-align: center;}
 	
 	#morris-images img {height: 233px; width: 240px;}
 	#pebbfit-images img {height: 270px; width: 152px;}
