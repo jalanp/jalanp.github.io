@@ -457,7 +457,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 		float: right;
 		z-index: 2;
 	}
-	/*.project-images {display: none;}*/
+	.skills-background-bar {margin: 0.4em 1.7em;}
 }
 
 @media(max-width: 509px) {
