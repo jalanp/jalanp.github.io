@@ -164,11 +164,13 @@ $(document).ready(function(){
 			$("#nav").css("display","inline-block");
 			displayNav = 1;
 			headerResize(displayNav, true);
+			$(this).attr("src", "images/mobile_nav_button_actual_selected.png");
 		}
 		else {
 			displayNav = 0;
 			headerResize(displayNav, true);
 			setTimeout(function(){$("#nav").css("display","none");}, 150);
+			$(this).attr("src", "images/mobile_nav_button_actual.png");
 		}
 		
 		//resize header and page content
