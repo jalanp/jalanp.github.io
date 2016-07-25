@@ -458,6 +458,8 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 		z-index: 2;
 	}
 	.skills-background-bar {margin: 0.4em 1.7em;}
+	.project-button {width: 100%;}
+	.project-button-link {width: 150px; margin: auto;}
 }
 
 @media(max-width: 509px) {
