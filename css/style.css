@@ -306,6 +306,7 @@ header {
 }
 
 .project-images {margin: 1em; text-align: center;}
+#namcap-images img {height: 644px; width: 587px;}
 #morris-images img {height: 634px; width: 654px;}
 #pebbfit-images img {height: 494px; width: 278px;}
 #notyfy-images img {height: 410px; width: 686px;}
@@ -421,6 +422,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#profile-pic img {width: 30%;}
 	#first-about-me {margin-top: 0.5em; width: 92%;}
 	
+	#namcap-images img {height: 470px; width: 428px;}
 	#morris-images img {height: 463px; width: 478px;}
 	#pebbfit-images img {height: 409px; width: 230px;}
 	#notyfy-images img {height: 300px; width: 502px}
@@ -431,6 +433,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 }
 
 @media(max-width: 888px) {
+	#namcap-images img {height: 297px; width: 270px;}
 	#morris-images img {height: 293px; width: 302px;}
 	#pebbfit-images img {height: 338px; width: 190px;}
 	#notyfy-images img {height: 190px; width: 317px;}
@@ -481,6 +484,7 @@ article h2#thanks-header {font-size: 3em; text-align: center;}
 	#profile-pic img {width: 55%}
 	article h2, article h1, article h3, article p, article ul {text-align: center;}
 	
+	#namcap-images img {height: 237px; width: 216px;}
 	#morris-images img {height: 233px; width: 240px;}
 	#pebbfit-images img {height: 270px; width: 152px;}
 	#notyfy-images img {height: 144px; width: 240px;}
